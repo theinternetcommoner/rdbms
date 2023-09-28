@@ -1,0 +1,24 @@
+{% extends 'template.html' %}
+
+{% block title %}Delete Data{% endblock %}
+
+{% block content %}
+
+{% for row in rows %}
+	<h3>
+	<input type="hidden" name="id" value="{{ row[0] }}">
+	<label>First Name: </label>{{ row[1] }}
+	<br>
+	<label>Middle Name: </label>{{ row[2] }}
+	<br>
+	<label>Last Name: </label>{{ row[3] }}
+	<br>
+	<label>School: </label>{{ row[4] }}
+	<br>
+	<label>Address: </label>{{ row[5] }}
+	<br>
+	<a class="btn btn-danger" href="{{ url_for('admin.deleterecord', id = row[0]) }}" role="button">Delete</a>
+	</h3>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'template.html' %}
+
+{% block title %}New Form{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid">
+	<form class="w-25 p-3" action="{{ url_for('admin.insertrecord') }}" method="POST">
+		<div class="form-group">
+			<label>First Name</label>
+			<input type="text" class="form-control" name="fname" placeholder="Enter First Name" required>
+			<label>Middle Name</label>
+			<input type="text" class="form-control" name="mname" placeholder="Enter Middle Name" required>
+			<label>Last Name</label>
+			<input type="text" class="form-control" name="lname" placeholder="Enter Last Name" required>
+			<label>School Name</label>
+			<input type="text" class="form-control" name="schname" placeholder="Enter School Name" required>
+			<label>School Address</label>
+			<input type="text" class="form-control" name="schaddress" placeholder="Enter School Address" required>
+			<br>
+			<input class="btn btn-primary" type="submit" value="Submit">
+		</div>
+	</form>
+</div>
+
+{% endblock %}

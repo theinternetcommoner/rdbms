@@ -1,0 +1,21 @@
+{% extends 'template.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+<div align="center">
+	<form class="w-25 p-3" action="{{ url_for('admin.logincheck') }}" method="POST"">
+		<div class="jumbotron" align="left">
+			<h1 align="center">User Login</h1>
+			<br>
+			<label>Username</label>
+			<input type="text" name="usr">
+			<br>
+			<br>
+			<input class="btn btn-primary" type="submit" value="Login">
+		</div>
+	</form>
+</div>
+
+{% endblock %}
