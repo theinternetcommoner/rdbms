@@ -2,6 +2,10 @@
 flask rdbms
 ### commands used for this project:
 pip install virtualenv  
+virtualenv venv to create virtual environment  
+activate vitual environment  
+ - ./venv/Scripts/Activate(Windows)  
+ - source venv/bin/activate(Linux)  
 pip install flask  
 python -m pip install waitress
 
