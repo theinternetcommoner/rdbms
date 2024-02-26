@@ -5,24 +5,34 @@
 {% block content %}
 
 <div class="container">
-	<form class="w-25 p-3" action="{{ url_for('admin.update') }}" method="POST">
-		<div class="form-group">
-			{% for row in rows %}
+	<form class="form-fontrol" action="{{ url_for('admin.update') }}" method="POST">
+		<h2 class="text-center mb-4">Update Record</h2>
+		{% for row in rows %}
 			<input type="hidden" name="id" value="{{ row[0] }}">
-			<label>First Name</label>
-			<input type="text" class="form-control" name="fname" value="{{ row[1] }}">
-			<label>Middle Name</label>
-			<input type="text" class="form-control" name="mname" value="{{ row[2] }}">
-			<label>Last Name</label>
-			<input type="text" class="form-control" name="lname" value="{{ row[3] }}">
-			<label>School Name</label>
-			<input type="text" class="form-control" name="schname" value="{{ row[4] }}">
-			<label>School Address</label>
-			<input type="text" class="form-control" name="schaddress" value="{{ row[5] }}">
-			<br>
-			<input class="btn btn-warning" type="submit" value="Submit">
-			{% endfor %}
-		</div>
+			<div class="form-group">
+				<label>First Name</label>
+				<input type="text" class="form-control" name="fname" value="{{ row[1] }}">
+			</div>
+			<div class="form-group">
+				<label>Middle Name</label>
+				<input type="text" class="form-control" name="mname" value="{{ row[2] }}">
+			</div>
+			<div class="form-group">
+				<label>Last Name</label>
+				<input type="text" class="form-control" name="lname" value="{{ row[3] }}">
+			</div>
+			<div class="form-group">
+				<label>School Name</label>
+				<input type="text" class="form-control" name="schname" value="{{ row[4] }}">
+			</div>
+			<div class="form-group">
+				<label>School Address</label>
+				<input type="text" class="form-control" name="schaddress" value="{{ row[5] }}">
+			</div>
+			<div class="form-group">
+				<input class="btn btn-warning btn-block" type="submit" value="Submit">
+			</div>
+		{% endfor %}
 	</form>
 </div>
 
