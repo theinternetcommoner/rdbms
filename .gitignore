@@ -2,3 +2,5 @@ __pycache__
 README.md
 requirements.txt
 LICENSE
+venv
+*.pyc
