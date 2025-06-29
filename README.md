@@ -7,7 +7,10 @@ activate vitual environment
  - ./venv/Scripts/Activate(Windows)  
  - source venv/bin/activate(Linux)  
 pip install flask  
-python -m pip install waitress
+python -m pip install gunicorn
+
+### Example command to run with Gunicorn:
+gunicorn -w 4 -b 0.0.0.0:5555 app:app
 
 ### for creating requirements.txt (includes everything)
 pip freeze > requirements.txt
