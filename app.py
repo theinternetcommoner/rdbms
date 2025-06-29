@@ -11,7 +11,7 @@ from admin.admin import admin
 '''
 deploy using waitress WSGI
 '''
-from waitress import serve
+# from waitress import serve # Removed for Gunicorn
 
 app = Flask(__name__)
 app.secret_key = 'nooneshouldknow'
@@ -74,4 +74,10 @@ if __name__ == '__main__':
 	if dev_mode == True:
 		app.run(port = 5555, debug = True)
 	else:
-		serve(app, host = '0.0.0.0', port = 5555, threads = 4)
+		# Gunicorn will be used to serve the app in production.
+		# Example command: gunicorn -w 4 -b 0.0.0.0:5555 app:app
+		# This script will typically not reach the 'else' block when run by Gunicorn,
+		# as Gunicorn imports the 'app' object directly.
+		# If run directly in a non-dev production setup (not recommended),
+		# it would simply do nothing here, relying on an external Gunicorn process.
+		pass
