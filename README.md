@@ -10,7 +10,7 @@ pip install flask
 python -m pip install gunicorn
 
 ### Example command to run with Waitress:
-waitress-serve --host=0.0.0.0 --port=5555 --workers=4 app:app
+python app.py
 
 ### for creating requirements.txt (includes everything)
 pip freeze > requirements.txt

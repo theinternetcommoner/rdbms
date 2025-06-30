@@ -68,7 +68,7 @@ for running the front page (landing page)
 def index():
 	return render_template('landingpage.html')
 
-dev_mode = True
+dev_mode = False
 
 if __name__ == '__main__':
 	if dev_mode == True:
@@ -79,5 +79,5 @@ if __name__ == '__main__':
 		# This script will typically not reach the 'else' block when run by Waitress,
 		# as Waitress imports the 'app' object directly using waitress-serve.
 		# If you wanted to run Waitress programmatically, you could do:
-		# serve(app, host='0.0.0.0', port=5555, threads=4)
+		serve(app, host='0.0.0.0', port=5555, threads=4)
 		pass
