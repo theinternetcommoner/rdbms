@@ -68,6 +68,10 @@ for running the front page (landing page)
 def index():
 	return render_template('landingpage.html')
 
+@app.route('/health')
+def health_check():
+    return jsonify(status="ok"), 200
+
 dev_mode = False
 
 if __name__ == '__main__':
