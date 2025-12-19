@@ -16,8 +16,5 @@ COPY . .
 # Make port 5555 available to the world outside this container
 EXPOSE 5555
 
-# Define environment variable
-ENV FLASK_APP app.py
-
 # Run app.py when the container launches
 CMD ["waitress-serve", "--host=0.0.0.0", "--port=5555", "app:app"]
