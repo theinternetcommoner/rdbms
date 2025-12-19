@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-and-run:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - name: Checkout code
@@ -22,10 +22,10 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Build Docker image
-        run: docker build -t my-flask-app .
+        run: docker build -t rdbms-app .
 
       - name: Run Docker container
-        run: docker run -d -p 5555:5555 my-flask-app
+        run: docker run -d -p 5555:5555 rdbms-app
 
       - name: Verify application is running
         run: |
