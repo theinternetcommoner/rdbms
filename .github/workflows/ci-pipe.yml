@@ -9,7 +9,7 @@ on:
 jobs:
   # STAGE 1: Continuous Integration (Testing)
   test:
-    runs-on: windows-11
+    runs-on: windows-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
