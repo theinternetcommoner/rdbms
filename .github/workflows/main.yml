@@ -16,13 +16,13 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.9'
+          python-version: '3.11'
 
       - name: Install dependencies
         run: pip install -r requirements.txt
 
       - name: Build Docker image
-        run: docker build -t my-flask-app .
+        run: docker build -t rdbms-app .
 
       - name: Run Docker container
         run: docker run -d -p 5555:5555 my-flask-app
